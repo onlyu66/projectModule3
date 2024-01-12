@@ -1,6 +1,7 @@
 package com.ra.view;
 
 import com.ra.service.CategoryService;
+import com.ra.service.ProductService;
 
 import java.util.Scanner;
 
@@ -74,12 +75,13 @@ public class Menu {
             System.out.println("4. Hiển thị sản phẩm theo tên A-Z");
             System.out.println("5. Hiển thị sản phẩm theo lợi nhuận từ cao-thấp");
             System.out.println("6. Tìm kiếm sản phẩm");
-            System.out.println("7. Quay lại");
+            System.out.println("7. Quay lại\n");
+            ProductService.displayProduct();
             System.out.println("Mời bạn chọn từ 1 - 7");
             int choice1 = Integer.parseInt(scanner.nextLine());
             switch (choice1){
                 case 1:
-                    System.out.println("Thực hiện thêm mới");
+                    ProductService.addCategory();
                     break;
                 case 2:
                     System.out.println("Cập nhật sản phẩm");
